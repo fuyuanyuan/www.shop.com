@@ -1,0 +1,127 @@
+[ 2014-06-26T23:49:23+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020000s ]
+SQL: SHOW COLUMNS FROM `sh_category` [ RunTime:1.050001s ]
+SQL: SELECT * FROM `sh_category` WHERE ( parent_id=0 )  [ RunTime:0.030000s ]
+SQL: SELECT * FROM `sh_category` WHERE ( parent_id=13 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `sh_category` WHERE ( parent_id=14 )  [ RunTime:0.030000s ]
+SQL: SHOW COLUMNS FROM `sh_news` [ RunTime:0.140001s ]
+SQL: SHOW COLUMNS FROM `sh_news_cat` [ RunTime:0.108001s ]
+SQL: SELECT * FROM `sh_news_cat` WHERE ( is_help='是' )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `sh_news` WHERE ( cat_id=2 AND isshow="是" )  [ RunTime:0.002001s ]
+SQL: SELECT * FROM `sh_news` WHERE ( cat_id=3 AND isshow="是" )  [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sh_button` [ RunTime:0.057001s ]
+ERR: 1146:Table 'shop2.sh_button' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `sh_button`
+SQL: SELECT * FROM `sh_button`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'shop2.sh_button' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `sh_button` 
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Layout\Controller\LayoutController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `sh_ad` [ RunTime:0.060000s ]
+SQL: SHOW COLUMNS FROM `sh_ad_pos` [ RunTime:0.090000s ]
+SQL: SELECT * FROM `sh_ad_pos` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `sh_ad` WHERE ( is_on='是' AND pos_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `sh_ad_pos` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `sh_ad` WHERE ( is_on='是' AND pos_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT id,title FROM sh_news WHERE cat_id IN(SELECT id FROM sh_news_cat WHERE is_help="否") AND isshow="是" LIMIT 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sh_goods` [ RunTime:0.080000s ]
+SQL: SHOW COLUMNS FROM `sh_recommend` [ RunTime:0.030000s ]
+ERR: 1146:Table 'shop2.sh_recommend' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `sh_recommend`
+SQL: SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='疯狂抢购' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'shop2.sh_recommend' doesn't exist
+ [ SQL语句 ] : SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='疯狂抢购' ) LIMIT 1  
+SQL: SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() )  [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() ) 
+SQL: SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='热卖商品' ) LIMIT 1   [ RunTime:0.010000s ]
+ERR: 1146:Table 'shop2.sh_recommend' doesn't exist
+ [ SQL语句 ] : SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='热卖商品' ) LIMIT 1  
+SQL: SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() )  [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() ) 
+SQL: SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='推荐商品' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'shop2.sh_recommend' doesn't exist
+ [ SQL语句 ] : SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='推荐商品' ) LIMIT 1  
+SQL: SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() )  [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() ) 
+SQL: SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='新品上架' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'shop2.sh_recommend' doesn't exist
+ [ SQL语句 ] : SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='新品上架' ) LIMIT 1  
+SQL: SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() )  [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() ) 
+SQL: SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='猜您喜欢' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'shop2.sh_recommend' doesn't exist
+ [ SQL语句 ] : SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='猜您喜欢' ) LIMIT 1  
+SQL: SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() )  [ RunTime:0.010000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT `id`,`mid_logo`,`shop_price`,`goods_name` FROM `sh_goods` WHERE ( id IN() ) 
+SQL: SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='首页中间大类推荐' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'shop2.sh_recommend' doesn't exist
+ [ SQL语句 ] : SELECT `goods_id` FROM `sh_recommend` WHERE ( rec_name='首页中间大类推荐' ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `sh_goods` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `sh_category` WHERE ( parent_id=0 AND is_rec="是" )  [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'is_rec' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `sh_category` WHERE ( parent_id=0 AND is_rec="是" ) 
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Home\Controller\IndexController.class.php 第 46 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: top D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+NOTIC: [8] Undefined index: top D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 35 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 156 行.
+NOTIC: [8] Undefined index: mid D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 173 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 173 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 307 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 323 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 339 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 355 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 371 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 416 行.
+NOTIC: [8] Undefined index: bottom D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 540 行.
+NOTIC: [8] Undefined index: bottom D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 540 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 540 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.740001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.740001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.030000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.030000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.050000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.050000s ]
+
+[ 2014-06-26T23:49:24+08:00 ] 127.0.0.1 /index.php/Member/Index/ajaxChkLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sh_category` [ RunTime:0.015001s ]
+SQL: SELECT * FROM `sh_category` WHERE ( parent_id=0 )  [ RunTime:0.004000s ]
+SQL: SELECT * FROM `sh_category` WHERE ( parent_id=13 )  [ RunTime:0.003000s ]
+SQL: SELECT * FROM `sh_category` WHERE ( parent_id=14 )  [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `sh_news` [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `sh_news_cat` [ RunTime:0.012000s ]
+SQL: SELECT * FROM `sh_news_cat` WHERE ( is_help='是' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `sh_news` WHERE ( cat_id=2 AND isshow="是" )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `sh_news` WHERE ( cat_id=3 AND isshow="是" )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sh_button` [ RunTime:0.020000s ]
+ERR: 1146:Table 'shop2.sh_button' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `sh_button`
+SQL: SELECT * FROM `sh_button`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'shop2.sh_button' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `sh_button` 
+NOTIC: [2] Invalid argument supplied for foreach() D:\phphuanjing\apache\htdocs\www.shop.com\Application\Layout\Controller\LayoutController.class.php 第 24 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
